@@ -1,0 +1,33 @@
+=== 调用约定16 ===
+[Argument]
+  整型参数{1..3}->{di, si, dx}, 其余自右向左依次压栈
+
+[Caller Saved]
+  {ax, di, si, dx}
+
+[Callee Saved]
+  {bx, cx, bp}
+
+[Stack]
+  Callee clean
+
+[Return]
+  整型->ax
+
+=== 调用约定64 ===
+[Argument]
+  整型参数{1..6}->{rdi, rsi, rdx, rcx, r8, r9}, 其余自右向左依次压栈
+  浮点参数{1..6}->{xxm0..xxm7}, 其余自右向左依次压栈
+
+[Caller Saved]
+  {rax, rdi, rsi, rdx, rcx, r8, r9, r10, r11}
+
+[Callee Saved]
+  {rbx, rbp, r12, r13, r14, r15}
+
+[Stack]
+  Callee clean
+
+[Return]
+  整型->rax
+  浮点->xxm0
