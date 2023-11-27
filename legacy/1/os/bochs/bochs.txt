@@ -1,0 +1,5 @@
+# 创建硬盘
+bximage
+
+# 启动
+bochs -f bochsrc
