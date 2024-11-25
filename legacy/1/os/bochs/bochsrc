@@ -1,0 +1,9 @@
+# 一个CPU:单核:单线程
+cpu: model=corei7_haswell_4770, count=1:1:1
+
+# guest客户机内存大小,host占用主机多少内存
+memory: guest=64, host=32
+
+boot: disk
+
+ata0-master: type=disk, path="hd40.img", mode=flat
